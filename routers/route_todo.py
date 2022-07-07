@@ -30,7 +30,7 @@ async def create_todo(request: Request, response: Response, data: TodoBody, csrf
 @router.get("/api/todo", response_model=List[Todo])
 async def get_todos(request: Request):
     """todoの取得"""
-    # auth.verify_jwt(request)
+    auth.verify_jwt(request)
     res = await db_get_todos()
     return res
 
