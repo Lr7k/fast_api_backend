@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uviron.works.UvironWoker main:app
+web: gunicorn -w 4 -k uvicorn.works.UvironWoker main:app
